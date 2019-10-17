@@ -3,7 +3,10 @@
 class Complex {
 private:
   double real;        // the real part
-  double imaginary;   // the imaginary part
+  double imaginary;  // the imaginary part
+  static double maxreal;
+  static double maxim;
+  static double maxmag;
 
   public:
     // construct the complex number zero
@@ -18,6 +21,8 @@ private:
     void setImaginary(double im);
     double magnitude();
     void normalize();
-
+    void setmax();
+    static void printMaxComplex();
+    static Complex fromMax();
     ~Complex();
 };

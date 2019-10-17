@@ -9,9 +9,15 @@ Complex::Complex() {
   imaginary = 0.0;
 }
 
+double Complex:: maxreal;
+double Complex:: maxim;
+double Complex:: maxmag;
+
+
 Complex::Complex(double real, double imaginary) {
   this->real = real;
   this->imaginary = imaginary;
+  (*this).setmax();
 }
 
 double Complex::getReal() {
@@ -24,10 +30,12 @@ double Complex::getImaginary() {
 
 void Complex::setReal(double re) {
   real = re;
+  (*this).setmax();
 }
 
 void Complex::setImaginary(double im) {
   imaginary = im;
+  (*this).setmax();
 }
 
 double Complex::magnitude() {
@@ -41,6 +49,24 @@ void Complex::normalize() {
     real = real / magnitude_val;
     imaginary = imaginary / magnitude_val;
   }
+}
+
+void Complex::setmax() {
+    if (std::sqrt(std::pow(real, 2) + pow(imaginary, 2))>maxmag) {
+    maxmag = std::sqrt(std::pow(real, 2) + pow(imaginary, 2));
+    maxreal = real;
+    maxim = imaginary;
+  }
+
+}
+
+void Complex::printMaxComplex() {
+  std::cout << "(" <<maxreal << ","<<maxim << ")" << std::endl;
+
+}
+
+Complex Complex::fromMax() {
+  return Complex(maxreal,maxim);
 }
 
 Complex::~Complex() {
