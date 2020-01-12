@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/sunho/Documents/Bachelor 2/CSE201/Main/Main/main 6_1.cpp">
+   </FileRef>
+   <FileRef
+      location = "group:../Main/main 6_1.hpp">
+   </FileRef>
+   <FileRef
+      location = "group:../../../../../Downloads/solutions_01/main6_1.cpp">
+   </FileRef>
+   <FileRef
+      location = "self:">
+   </FileRef>
+</Workspace>
